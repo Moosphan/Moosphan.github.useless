@@ -3,7 +3,10 @@
     $('.article img:not(".not-gallery-item")').each(function() {
         // wrap images with link and add caption if possible
         if ($(this).parent('a').length === 0) {
-            $(this).wrap('<a class="gallery-item" href="' + $(this).attr('src') + '"></a>');
+            // modified
+            //$(this).wrap('<a class="gallery-item" href="' + $(this).attr('src') + '"></a>');
+            $(this).wrap('<a class="gallery-item" style="display:block;text-align:center;" href="' + $(this).attr('src') + '"></a>');
+            //end modified
             if (this.alt) {
                 $(this).after('<p class="has-text-centered is-size-6 caption">' + this.alt + '</p>');
             }

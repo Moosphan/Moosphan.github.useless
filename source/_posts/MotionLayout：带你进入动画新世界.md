@@ -13,7 +13,7 @@ tags:
 
 首先，我们来看一张熟悉的 MotionLayout 结构图：
 
-![MotionLayout结构](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/MotionLayout结构.png)
+![MotionLayout结构](MotionLayout结构.png)
 
 从上图我们可以看到，KeyFrameSet 中主要包含了 **KeyPosition**、**KeyAttribute** 以及 **KeyCycle** 三种类型的关键帧。其实除此以外，KeyFrameSet 还提供了 **KeyTimeCycle** 和 **KeyTrigger**，具体的用法和使用场景会在后续文章进行介绍。本文中，我们先来详细看一下 **KeyAttribute** 以及 **KeyCycle**。
 
@@ -21,11 +21,11 @@ tags:
 
 我们知道，*KeyPosition* 描述的是目标 View 在某个**位置的关键帧**，进而改变动画的移动**轨迹**，至于 *KeyAttribute*，则是描述这个 View 在某个关键帧时所处的“**状态**”，即所谓的”高矮胖瘦“。前者侧重的是**改变动画的轨迹**，后者则是强调**更改 View 自身的属性**。
 
-<img src="https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/motion-key attribute.png" alt="motion-key attribute" style="zoom:50%;" />
+<img src="motion-key attribute.png" alt="motion-key attribute" style="zoom:50%;" />
 
 从上图的 KeyAttribute 结构图中我们可以看到，它支持各种属性，足够我们来描述一个 View 的状态了。假如我们希望实现如下效果：
 
-![keycustom_bounce_ball](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/keycustom_bounce_ball.png)
+![keycustom_bounce_ball](keycustom_bounce_ball.png)
 
 
 
@@ -114,7 +114,7 @@ tags:
 
 考虑到 KeyAttribute 中提供的属性有限，所以，**CustomAttribute** 横空出世，它支持**任意自定义的属性**，常见的有 `TextView` 的 `textColor`、`background` 或者是 `ImageView` 的 `src` 、`tint` 等。当然还不止这些，我们平时自定义 View 中提供的自定义属性同样支持哦。就像 GitHub 上的一个 [ShapeOfView](https://github.com/florent37/ShapeOfView) 的开源项目，可以提供给我们自定义控件形状的功能，那么结合了 MotionLayout 中的 `CustomAttribute`，我们就可以达到下面这种平滑转换的效果：
 
-<img src="https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/shapeview_preview.png" alt="shapeview_preview" style="zoom:50%;" />
+<img src="shapeview_preview.png" alt="shapeview_preview" style="zoom:50%;" />
 
 举个简单的例子，上面的小球加载动画我们希望它能够在运动过程中**颜色**也随之变化，然而 <KeyAttribute> 中并没有提供相关属性，这里我们就可以借助于 <CustomAttribute> 来实现啦。改动部分代码如下所示：
 
@@ -158,7 +158,7 @@ tags:
 
 我们设置了 `colorFilter` 属性，作用相当于 `tint`，重新运行后，可以看到如下效果：
 
-![keycustom_color_ball](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/keycustom_color_ball.png)
+![keycustom_color_ball](keycustom_color_ball.png)
 
 需要我们注意的是，这里的自定义属性的 `attributeName` 对应的值并不一定是在 xml 布局文件中控件对应的属性名称，而是在对应控件中拥有 setter 设置的属性名称。怎么理解呢？其实归根结底 CustomAttribute 内部还是利用的反射，从下面的部分源码中就能够察觉到：
 
@@ -255,7 +255,7 @@ public static void setAttributes(View view, HashMap<String, ConstraintAttribute>
 
 简单来说，**KeyCycle** 是针对特定视图的非常详细的**定制化插值器**。它比较适合我们常说的波形或周期运动场景，比如实现控件的抖动动画或者周期性的循环动画。
 
-<img src="https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/motion_keycycle.png" alt="motion_keycycle" style="zoom:50%;" />
+<img src="motion_keycycle.png" alt="motion_keycycle" style="zoom:50%;" />
 
 如上图所示，`KeyCycle` 主要由以上几个属性组成，前两个相信大家都比较熟悉了，这里不必多说，另外 `view properties` 正如之前的 `KeyAttribute` 结构图中所描述的那样，代表View的各种属性，如 rotation、translation、alpha 等等。 这里主要介绍另外三个比较重要且具有特色的属性：
 
@@ -265,7 +265,7 @@ public static void setAttributes(View view, HashMap<String, ConstraintAttribute>
 
 下面举个简单的例子帮助理解，以下面这个效果为例：
 
-![keycycle_shake](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/keycycle_shake.png)
+![keycycle_shake](keycycle_shake.png)
 
 对应的 `KeyFrameSet` 代码如下所示：
 
@@ -297,17 +297,17 @@ public static void setAttributes(View view, HashMap<String, ConstraintAttribute>
 
 根据动画效果结合代码可以知道，我们这个放大的Q弹的效果只是改变了 `scaleX` 这个属性，并且让它“摇摆了”大概三个来回（周期），恰好 `wavePeriod` 属性值为 3。也许动画不太方便察觉，这样，我们借助于 Google 提供的专门用来查看 KeyCycle 波形变化的[**快捷工具**](https://github.com/googlearchive/android-ConstraintLayoutExamples/releases/download/1.0/CycleEditor.jar)来查看它波形变化过程：
 
-![keycycle_wave](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/keycycle_wave.png)
+![keycycle_wave](keycycle_wave.png)
 
 如此一来，我们就很直观地看到上图中描绘的波形变化过程了，的确是三个周期没有错，并且是以正弦 sin 来变化的。
 
 关于这款工具的使用，大家可以前往：https://github.com/googlearchive/android-ConstraintLayoutExamples/releases/download/1.0/CycleEditor.jar 上下载，然后通过执行 `java -jar [xx/CycleEditor.jar]` 即可看到可视化界面，然后将 **KeyFrameSet** 部分的代码 copy 到编辑栏，然后点击 File -> parse xml 即可看到代码对应的波形走势。如下所示：
 
-![keycycle_tool_preview](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/keycycle_tool_preview.png)
+![keycycle_tool_preview](keycycle_tool_preview.png)
 
 我们来看看下面这个效果：
 
-![keycycle_apply](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/keycycle_apply.png)
+![keycycle_apply](keycycle_apply.png)
 
 这个Q弹的效果就是基于 KeyCycle 实现的，我们来看看它的场景实现：
 
@@ -394,7 +394,7 @@ public static void setAttributes(View view, HashMap<String, ConstraintAttribute>
 
 Material design 组件库中提供了一个 **AppBarLayout** 组件，我们经常使用它来配合 *CoordinatorLayout* 控件实现一些简单的交互动作，例如头部导航栏的伸缩效果，各位应该或多或少都用到过，这里不再介绍。下面我们就从 AppBarLayout 开始，看看如何实现与 MotionLayout 的联动。首先，我们先来看下面这个简单的效果：
 
-![simple_appbar_preview](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/simple_appbar_preview.png)
+![simple_appbar_preview](simple_appbar_preview.png)
 
 我们知道，通过 `CoordinatorLayout` 和 `AppBarLayout` 也可以实现类似的交互效果，但显然 MotionLayout 会更加灵活多变。其实上面的动画效果很简单，只是在 *AppBarLayout* 高度变化过程中改变背景色、标题的位置和大小即可，对应的 `MotionScene` 文件代码如下所示：
 
@@ -545,7 +545,7 @@ class MotionToolBar @JvmOverloads constructor(
 
 理解了上述代码，就不难实现下面的效果了：
 
-![complex_appbar_preview](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/complex_appbar_preview.png)
+![complex_appbar_preview](complex_appbar_preview.png)
 
 具体代码就不贴了，文末会附上 GitHub 仓库地址，所有效果实现代码都能够在里面找到。
 
@@ -555,7 +555,7 @@ class MotionToolBar @JvmOverloads constructor(
 
 那么，Lottie 与 MotionLayout 一起能够碰撞出怎样的火花呢？我们以下面的一个简单效果为例：
 
-![motion_with_lottie](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/MotionLayout/motion_with_lottie.png)
+![motion_with_lottie](motion_with_lottie.png)
 
 其实简单来说，MotionLayout 能够将自身的动画过程与 Lottie 同步，就像图中的安卓机器人动画就是 MotionLayout 实现的，而下面的卡通人物眼神游离的动画则是 Lottie 动画，从图中可以看到，通过手势滑动 `ViewPager` 两个动画一直保持着“同步运动”。下面我们来看看如何实现的，首先是布局文件，比较简单：
 
