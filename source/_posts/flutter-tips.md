@@ -1,5 +1,5 @@
 ---
-title: flutter_tips
+title: Flutter 开发小结 | Tips
 date: 2020-04-19 23:37:12
 tags: Flutter
 ---
