@@ -11,7 +11,7 @@ tags: Gradle
 
 当我们在Android项目中使用 Gradle 3.0 及以上版本的插件，你一定会注意到 `compile` 关键字已经被弃用来支持 `implementation` 和 `api`。让我们借助一个例子来了解它们。
 
-示例应用 (Kotlin) 可以在[这里](https://github.com/iamBedant/ApiVsImplementation)找到。
+示例应用 (Kotlin) 可以在[这里](https://github.com/iamBedant/ApiVsImplementation)找到。<!-- more -->
 
 让我们假设有一个 Android 项目包含以下四个 library module：
 
