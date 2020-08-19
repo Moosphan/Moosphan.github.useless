@@ -1,5 +1,5 @@
 ---
-title: [译] Android 中的 MVP: 如何使 Presenter 层系统化？
+title: Android中的 MVP：如何使 Presenter 层系统化？
 date: 2018-12-24 19:04:21
 tags: 
 - MVP
