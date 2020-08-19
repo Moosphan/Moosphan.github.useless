@@ -1,6 +1,6 @@
 ## Moosphan's Blog
 
-![readme_banner](./assets/images/readme_banner.png)
+![readme_banner](https://github.com/Moosphan/SelfAssetRepository/blob/master/blog/readme_banner.png)
 
 此仓库仅用来**分享生活，记录点滴**。同样也作为**备份知识，三省吾身**的界碑。
 
