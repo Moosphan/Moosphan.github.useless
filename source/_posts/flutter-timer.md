@@ -10,7 +10,7 @@ toc: true
 说到验证码功能，我们通常的做法可能是借助于**计时器**来实现，抱着几乎肯定的态度赶紧去查了一下 Flutter 官网有没有相关的计时器组件。果不其然，官方的确为我们提供了一个 [**Timer**](https://api.flutter.dev/flutter/dart-async/Timer-class.html) 组件来实现倒计时，我们来看看官方对于它的描述：
 <article class="message is-primary" style="font-size:1em">
 <div class="message-body">
-ount-down timer that can be configured to fire once or repeatedly.
+Count-down timer that can be configured to fire once or repeatedly.
 </div>
 </article>
 <!-- more -->
