@@ -118,43 +118,47 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: disqus
-    # Disqus shortname
-    shortname: ''
+    # Name of the comment plugin
+    type: gitalk
+    owner: Moosphan         # (required) GitHub user name
+    repo: Moosphan.github.io   # (required) GitHub repository name
+    client_id: dc647e1369a56ca7d0ca # (required) OAuth application client id
+    client_secret: 31a92ba8e7783a092d0dee1b591657b0afa9c931 # (required) OAuth application client secret
+    admin: Moosphan
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
-donates:
-    # Alipay donate button configurations
-    -
-        type: alipay
-        # Alipay qrcode image URL
-        qrcode: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
-    # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
-    # Wechat donate button configurations
-    -
-        type: wechat
-        # Wechat qrcode image URL
-        qrcode: ''
+# donates:
+#     # Alipay donate button configurations
+#     -
+#         type: alipay
+#         # Alipay qrcode image URL
+#         qrcode: ''
+#     # "Buy me a coffee" donate button configurations
+#     -
+#         type: buymeacoffee
+#         # URL to the "Buy me a coffee" page
+#         url: ''
+#     # Patreon donate button configurations
+#     -
+#         type: patreon
+#         # URL to the Patreon page
+#         url: ''
+#     # Paypal donate button configurations
+#     -
+#         type: paypal
+#         # Paypal business ID or email address
+#         business: ''
+#         # Currency code
+#         currency_code: USD
+#     # Wechat donate button configurations
+#     -
+#         type: wechat
+#         # Wechat qrcode image URL
+#         qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
-    type: sharethis
+    type: sharejs
     # URL to the ShareThis share plugin script
     install_url: ''
 # Sidebar configurations.
@@ -252,14 +256,14 @@ widgets:
         # Feedburner ID
         feedburner_id: ''
     # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ''
-        # AdSense AD unit ID
-        slot_id: ''
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: adsense
+    #     # AdSense client ID
+    #     client_id: ''
+    #     # AdSense AD unit ID
+    #     slot_id: ''
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
