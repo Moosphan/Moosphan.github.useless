@@ -2,6 +2,8 @@
 title: 带你领略 ConstraintLayout 1.1 的新功能
 date: 2018-05-20 10:08:20
 tags: ConstraintLayout
+catrgories: Android
+toc: true
 ---
 > * 原文地址：[Introducing Constraint Layout 1.1](https://medium.com/google-developers/introducing-constraint-layout-1-1-d07fc02406bc)
 > * 原文作者：[Sean McQuillan](https://medium.com/@objcode?source=post_header_lockup)

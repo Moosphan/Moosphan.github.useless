@@ -1,7 +1,12 @@
 ---
 title: 「2019，路漫漫其修远兮」
 date: 2020-01-08 09:22:15
-tags: 个人总结
+tags: 
+- 未来规划
+- 总结
+- 读书
+categories: 个人总结
+toc: true
 ---
 
 ![](https://user-gold-cdn.xitu.io/2019/12/26/16f423c6a5eec23b?w=2000&h=1400&f=png&s=5108418)

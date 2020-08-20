@@ -2,6 +2,8 @@
 title: 是时候让 Android Tools 属性拯救你了
 date: 2019-08-11 00:00:17
 tags: Android tools
+categories: Android
+toc: true
 ---
 日常开发过程中，我们都会遇到这样一种场景：我们写出的 UI 效果在对接数据之前需要提前进行预览，进而调整  UI 细节和排版问题。我们一般的做法是什么样的？如果存在像 TextView 或者 ImageView 这种基础控件，你是不是还在通过诸如 *`android:text="xxx"`* 和 *`android:src="@drawable/xxx"`* 的方式来测试和预览UI效果？当然你肯定也会遇到这些“脏数据”给你带来的困扰：测试的时候某些地方出现了本不该出现的数据，事后可能一拍脑门才发现，原来是布局中控件预览数据没有清除导致的。
 

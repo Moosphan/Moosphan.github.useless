@@ -4,6 +4,10 @@ date: 2018-12-24 19:04:21
 tags: 
 - MVP
 - Android architecture
+categories: 
+- Android
+- Architecture
+toc: true
 ---
 > * 原文地址：[MVP for Android: how to organize the presentation layer](https://antonioleiva.com/mvp-android/)
 > * 原文作者：[Antonio Leiva](https://antonioleiva.com)

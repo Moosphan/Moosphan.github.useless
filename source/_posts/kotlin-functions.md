@@ -2,6 +2,8 @@
 title: 当 Kotlin 中的监听器包含多个方法时，如何让它 “巧夺天工”？
 date: 2018-12-22 18:06:44
 tags: Kotlin
+categories: Kotlin
+toc: true
 ---
 > * 原文地址：[Listeners with several functions in Kotlin. How to make them shine?](https://antonioleiva.com/listeners-several-functions-kotlin/)
 > * 原文作者：[Antonio Leiva](https://antonioleiva.com)

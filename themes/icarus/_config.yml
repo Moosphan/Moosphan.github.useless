@@ -73,7 +73,7 @@ head:
 navbar:
     # Naviagtion menu items
     menu:
-        Home: /
+        Home: /archives
         Archives: /archives
         Categories: /categories
         Tags: /tags
@@ -185,7 +185,7 @@ widgets:
         # Author title
         author_title: 无名之辈，功起于细微
         # Author's current location
-        location: ShangHai
+        location: ShangHai @China
         # URL or path to the avatar image
         avatar: /img/avatar.png
         # Whether show the rounded avatar image
@@ -214,7 +214,7 @@ widgets:
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: toc
     # Recommendation links widget configurations
     -

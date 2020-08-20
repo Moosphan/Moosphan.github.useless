@@ -2,6 +2,8 @@
 title: Android Gradle3.0开始Implementation 与 Api的爱恨情仇
 date: 2020-08-19 13:48:35
 tags: Gradle
+categories: Android Gradle
+toc: true
 ---
 本文翻译于 Bedanta Bikash Borah 的文章，原文链接如下：
 

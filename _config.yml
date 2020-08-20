@@ -102,3 +102,5 @@ deploy:
   type: 'git'
   repo: https://github.com/Moosphan/Moosphan.github.io.git
   branch: master
+  name: Moosphan
+  email: moosphon@gmail.com
