@@ -1,10 +1,10 @@
 ## Moosphan's Blog
 
-![Banner](https://moosphan.github.io/gallery/about/about_banner.jpg)
+![](https://moosphan.github.io/gallery/about/about_banner.png)
 
 <article class="message is-primary" style="font-size:1em">
 <div class="message-body">
-分享生活，记录点滴，同样也作为备份知识，三省吾身的界碑。
+分享生活，记录点滴，也作为备份知识，三省吾身的界碑。
 </div>
 </article>
 后续文章内容主要包含以下几个方面：

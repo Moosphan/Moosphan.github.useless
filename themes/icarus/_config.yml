@@ -79,10 +79,10 @@ navbar:
         Tags: /tags
         About: /about
     # Links to be shown on the right of the navigation bar
-    links:
-        Download on GitHub:
-            icon: fab fa-github
-            url: 'https://github.com/ppoffice/hexo-theme-icarus'
+    # links:
+    #     Download on GitHub:
+    #         icon: fab fa-github
+    #         url: 'https://github.com/ppoffice/hexo-theme-icarus'
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
@@ -95,7 +95,7 @@ footer:
             url: 'https://creativecommons.org/licenses/by/4.0/'
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/ppoffice/hexo-theme-icarus'
+            url: 'https://github.com/Moosphan'
 # Article related configurations
 article:
     # Code highlight settings
@@ -199,15 +199,15 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: 'https://github.com/Moosphan'
-            Facebook:
-                icon: fab fa-facebook
+            Medium:
+                icon: fab fa-medium
                 url: 'https://facebook.com'
             Twitter:
                 icon: fab fa-twitter
-                url: 'https://twitter.com'
+                url: 'https://twitter.com/Moosphan'
             Dribbble:
                 icon: fab fa-dribbble
-                url: 'https://dribbble.com'
+                url: 'https://dribbble.com/moosphon'
             RSS:
                 icon: fas fa-rss
                 url: /
