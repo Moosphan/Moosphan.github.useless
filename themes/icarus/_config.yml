@@ -223,9 +223,12 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            Medium: 'https://medium.com/@moosphon'
-            掘金: 'https://juejin.im/user/2946346891100285'
-            简书: 'https://www.jianshu.com/u/c8cb84295426'
+            Android: 'https://developer.android.com/'
+            Flutter: 'https://flutter.cn/'
+            WanAndroid: 'https://www.wanandroid.com/'
+            Jakewharton: 'https://jakewharton.com/blog/'
+            Gityuan: 'http://gityuan.com/archive/'
+            Weishu: 'http://weishu.me/archives/'
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
