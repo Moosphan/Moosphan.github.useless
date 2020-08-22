@@ -13,9 +13,30 @@ module.exports = class extends Component {
         function renderArticleList(posts, year, month = null) {
             const time = moment([page.year, page.month ? page.month - 1 : null].filter(i => i !== null));
 
+            const zodiac = (() => {
+                switch (year % 12) {
+                    case 0: return 'symbolic-animals icon-monkey';
+                    case 1: return 'symbolic-animals icon-rooster';
+                    case 2: return 'symbolic-animals icon-dog';
+                    case 3: return 'symbolic-animals icon-pig';
+                    case 4: return 'symbolic-animals icon-rat';
+                    case 5: return 'symbolic-animals icon-ox';
+                    case 6: return 'symbolic-animals icon-tiger';
+                    case 7: return 'symbolic-animals icon-rabbit';
+                    case 8: return 'symbolic-animals icon-dragon';
+                    case 9: return 'symbolic-animals icon-snake';
+                    case 10: return 'symbolic-animals icon-horse';
+                    case 11: return 'symbolic-animals icon-goat';
+                    default: return 'symbolic-animals icon-ox';
+                }
+            })();
+
             return <div class="card">
                 <div class="card-content">
-                    <h3 class="tag is-primary">{month === null ? year : time.locale(language).format('MMMM YYYY')}</h3>
+                    <h3 class="tag" style={"background-color:#C61301;color:#ffffff;"}>{month === null ? year : time.locale(language).format('MMMM YYYY')}</h3>
+                    <div class="chinese-zodiac">
+                        <i class={zodiac}> </i>
+                    </div>
                     <div class="timeline">
                         {posts.map(post => {
                             const categories = post.categories.map(category => ({
